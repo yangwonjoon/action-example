@@ -1,16 +1,22 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
+#workflow 이름
 name: 'action-test'
 
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+# workflow를 동작하게하는 trigger, push일 경우 실행
 on: [push]
+
+
 jobs:
 
+  #job 이름
   action-test:
 
+    #job을 실행하는 환경
     runs-on: ubuntu-latest
 
+    
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
